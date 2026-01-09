@@ -1,0 +1,825 @@
+:root {
+    --bg-dark: #020c1b;
+    --bg-light: #0a192f;
+    --primary: #64ffda;
+    /* Um ciano para detalhes tech */
+    --gold: #D4AF37;
+    /* Dourado Nobre */
+    --text-main: #e6f1ff;
+    --text-secondary: #8892b0;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- HEADER --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(10, 25, 47, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.destaque {
+    color: var(--gold);
+    font-weight: 600;
+    text-indent: 8px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.btn-contact {
+    padding: 10px 20px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-contact:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+    background: radial-gradient(circle at center, #0e2444 0%, #020c1b 100%);
+}
+
+.hero h3 {
+    color: var(--gold);
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: #ccd6f6;
+}
+
+.hero h1 span {
+    color: var(--text-secondary);
+}
+
+.hero p {
+    max-width: 600px;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+/* --- PORTFOLIO SECTION --- */
+.section-title {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--text-main);
+}
+
+.section-title-wa {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--text-main);
+    position: relative;
+}
+
+#line-white {
+    position: relative;
+    top: -10px;
+    right: -70px;
+}
+
+#h3-line {
+
+    display: inline;
+    font-size: 1.9rem;
+
+    text-wrap: nowrap;
+}
+
+#p-line {
+
+    margin: 0;
+    width: 500px;
+    text-align: justify;
+}
+
+#box-twl-text {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    width: 500px;
+
+}
+
+#perguntas-frequentes {
+    margin: 0 auto;
+    width: 77.7vw;
+    display: flex;
+    justify-content: center;
+}
+
+.accordion-button {
+    background-color: var(--bg-light);
+    text-align: center;
+    width: 77.7vw;
+    color: var(--text-main);
+    border: none;
+
+}
+
+.accordion-body {
+    background-color: var(--bg-light);
+    color: var(--text-secondary);
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 1px;
+    background-color: var(--text-secondary);
+    margin-left: 20px;
+    opacity: 0.3;
+}
+
+.portfolio {
+    padding: 100px 10%;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--gold);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    background-color: #233554;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    /* AQUI VOCÊ VAI COLOCAR A FOTO DO SITE */
+    background-size: cover;
+    background-position: center;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    font-family: var(--font-heading);
+    color: var(--text-main);
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.tech-list {
+    display: flex;
+    gap: 15px;
+    font-size: 0.8rem;
+    color: var(--gold);
+    font-family: monospace;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#h2-box {
+    display: flex;
+    width: 77.7vw;
+    margin: 0 auto;
+    justify-content: left;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+/* Glassmorphism para o Header */
+header {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(2, 12, 27, 0.8) !important;
+}
+
+/* Efeito Hover nos Cards de Serviço */
+.service-card {
+    background: linear-gradient(135deg, #0a192f 0%, #020c1b 100%);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    transition: 0.4s;
+}
+
+.service-card:hover {
+    border-color: var(--gold);
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* --- WAVY TIMELINE CSS --- */
+.services-section {
+    height: 1800px;
+    padding: 100px 10%;
+    position: relative;
+    overflow: hidden;
+    /* Importante para animações laterais */
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    padding: 40px 0;
+}
+
+/* A Mágica da Linha SVG */
+.wavy-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centraliza a linha exatamente no meio */
+    width: 100px;
+    /* Largura da área da curva */
+    height: 150%;
+    z-index: 0;
+    /* Fica atrás dos textos */
+}
+
+/* Estilo Geral dos Itens */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    /* Ocupa metade da tela */
+    padding: 30px;
+    z-index: 1;
+    margin-bottom: 40px;
+    /* Espaço entre os serviços */
+}
+
+/* Posicionamento Direita/Esquerda */
+.item-right {
+    align-self: flex-end;
+    /* Joga para a direita */
+    text-align: left;
+    padding-left: 60px;
+    /* Afasta da linha central */
+}
+
+.item-left {
+    align-self: flex-start;
+    /* Joga para a esquerda */
+    text-align: right;
+    padding-right: 60px;
+    /* Afasta da linha central */
+}
+
+/* Estilo dos Títulos e Descrições */
+.content-box h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--text-main);
+    margin-bottom: 10px;
+    display: inline-block;
+    position: relative;
+}
+
+/* O sublinhado dourado do seu desenho */
+.content-box h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    height: 2px;
+    background-color: var(--gold);
+    width: 100%;
+}
+
+.item-left .content-box h3::after {
+    right: 0;
+}
+
+/* Sublinhado alinha à direita */
+.item-right .content-box h3::after {
+    left: 0;
+}
+
+/* Sublinhado alinha à esquerda */
+
+.content-box p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+/* --- ANIMAÇÕES ESPECÍFICAS DA TIMELINE --- */
+
+/* Base da animação (sobrescreve um pouco a padrão para este caso) */
+.timeline-item.reveal {
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+/* Itens da esquerda vêm da esquerda */
+.item-left.reveal {
+    transform: translateX(-100px);
+}
+
+/* Itens da direita vêm da direita */
+.item-right.reveal {
+    transform: translateX(100px);
+}
+
+/* Quando ficam ativos, voltam ao centro */
+.timeline-item.reveal.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* --- ESTILO SEÇÃO PROCESSO --- */
+.process-section {
+    padding: 100px 10%;
+    background-color: var(--bg-dark);
+}
+
+.process-subtitle {
+    color: var(--text-secondary);
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.process-card {
+    background: rgba(10, 25, 47, 0.4);
+    padding: 40px 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(5px);
+}
+
+.process-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--gold);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* O número gigante ao fundo */
+.step-number {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 8rem;
+    font-weight: 800;
+    color: rgba(212, 175, 55, 0.05);
+    /* Dourado bem transparente */
+    font-family: var(--font-heading);
+    line-height: 1;
+    z-index: 0;
+    transition: 0.4s;
+}
+
+.process-card:hover .step-number {
+    color: rgba(212, 175, 55, 0.1);
+    transform: scale(1.1);
+}
+
+.process-card h3 {
+    font-family: var(--font-heading);
+    color: var(--gold);
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.process-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    position: relative;
+    z-index: 1;
+}
+
+#our-services {
+    height: 38vh;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-flow: row nowrap;
+    text-align: center;
+}
+
+#line {
+    border: 1px solid rgba(255, 255, 255, 0.199);
+    height: 36vh;
+}
+
+.servicos-nobre {
+    width: 50%;
+    padding: 10px 20px;
+}
+
+/* --- ESTILO SEÇÃO COMO NÓS FAZEMOS ISSO --- */
+.how-we-do-it-section {
+    padding: 80px 3%;
+    /* Fundo ligeiramente mais claro para destacar o card */
+    background-color: #051326;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* O Card Interativo */
+.interactive-card {
+    /* Cor de fundo original do seu print */
+    background-color: #020c1b;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    height: 750px;
+    margin: 0 auto;
+    width: 80vw;
+    border: 2px solid transparent;
+    /* Borda transparente inicial */
+    /* Sombra sutil para profundidade */
+    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#box-twl {
+    position: relative;
+}
+
+.how-it-works-scroll {
+    background-color: #020c1b;
+    padding: 100px 0;
+    position: relative;
+}
+
+.scroll-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 120vh;
+    /* Dá espaço para o scroll acontecer */
+}
+
+/* Estilo dos Textos */
+.scroll-title {
+    font-family: var(--font-heading);
+    color: var(--text-main);
+    font-size: 2.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+.scroll-footer {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+    text-align: center;
+    margin-top: 50px;
+    max-width: 500px;
+}
+
+.scroll-footer h3 {
+    color: var(--gold);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Classes de Ativação (serão postas pelo JS) */
+.active-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* O SVG da Linha */
+.svg-wrapper {
+    width: 200px;
+    height: 600px;
+    margin: 20px 0;
+}
+
+#drawing-path {
+    /* Esconde a linha inicialmente */
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+
+/* Efeito de Hover no Card */
+.interactive-card:hover {
+    /* Elevação suave */
+    transform: translateY(-10px);
+    /* Borda dourada brilhante */
+    border-color: var(--gold);
+    /* Sombra mais intensa e com um brilho dourado */
+    box-shadow: 0 0 30px 10px rgba(212, 174, 55, 0.2),
+        0 0 30px rgba(212, 175, 55, 0.2) inset;
+}
+
+/* Ícone e seu Container */
+.icon-container {
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.consultancy-icon {
+    width: 60px;
+    height: 60px;
+    transition: all 0.5s ease;
+    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3));
+}
+
+/* Animação do Ícone no Hover */
+.interactive-card:hover .consultancy-icon {
+    /* Gira levemente e aumenta */
+    transform: rotate(10deg) scale(1.1);
+    /* Brilho mais intenso */
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.6));
+}
+
+/* Tipografia */
+.how-we-do-it-section .section-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    /* Garante que o título principal use a fonte correta e cor */
+    font-family: var(--font-heading);
+    color: var(--text-main);
+    text-transform: lowercase;
+    /* Mantendo seu estilo original */
+}
+
+.how-we-do-it-section .subtitle {
+    font-size: 1.4rem;
+    color: var(--gold);
+    margin-bottom: 20px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+.how-we-do-it-section .description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.card-content:hover {
+    background-image: rgba(0, 0, 0, 0.192);
+    z-index: 11;
+    content: "Clique para ver";
+}
+
+.span-hover {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #8892b0;
+}
+
+@media (max-width: 1020px) {
+    #line-white {
+        display: none;
+    }
+
+    #h3-line {
+        display: inline;
+        font-size: 1.9rem;
+        margin-bottom: 12px;
+        text-align: left;
+    }
+
+    #p-line {
+        margin: 0;
+        width: 500px;
+        text-align: justify;
+    }
+
+    #box-twl-text {
+        left: 0px;
+        margin-top: 30px;
+        display: flex;
+        flex-flow: column nowrap;
+        width: auto;
+        gap: 0;
+
+    }
+    .interactive-card{
+        height: 500px;
+    }
+}
+
+/* Ajuste para Celular */
+@media (max-width: 768px) {
+    .wavy-line {
+        display: none;
+    }
+
+    #line-white {
+        display: none;
+    }
+    #h2-ys{
+        display: inline;
+    }
+    #box-twl-text {
+        left: 0px;
+        margin-top: 30px;
+        display: flex;
+        flex-flow: column nowrap;
+        width: auto;
+        gap: 0;
+        position: relative;
+    }
+    #h3-line {
+        text-wrap: wrap;
+        font-size: 1.9rem;
+        margin-bottom: 12px;
+        text-align: left;
+    }
+    .interactive-card{
+        height: auto;
+    }
+
+    #p-line {
+        margin: 0;
+        width: 100%;
+        text-align: justify;
+        
+    }
+
+    /* Remove a linha em telas pequenas para não bagunçar */
+    .timeline-item {
+        width: 100%;
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    .item-right,
+    .item-left {
+        padding: 0;
+        align-self: center;
+    }
+
+    .content-box h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+    }
+
+    /* Sublinhado centralizado */
+    .item-left.reveal,
+    .item-right.reveal {
+        transform: translateY(50px);
+    }
+
+    /* No mobile, animação é só de baixo pra cima */
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    background-color: #020c1b;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    nav {
+        display: none;
+    }
+
+    /* Simples hide para mobile nesta versão */
+    .section-title::after {
+        width: 100px;
+    }
+
+    .hero {
+        padding: 0 5%;
+    }
+
+    .portfolio {
+        padding: 60px 5%;
+    }
+}
