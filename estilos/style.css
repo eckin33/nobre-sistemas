@@ -521,8 +521,10 @@ header {
 
 #line {
     border: 1px solid rgba(255, 255, 255, 0.199);
-    height: 36vh;
+    height: 100%;
+    max-height: 350px;
 }
+
 
 .servicos-nobre {
     width: 50%;
@@ -562,6 +564,7 @@ header {
 }
 #our-services-box{
     max-height: 650px;
+    min-height: 650px;
 }
 #call-box{
     width: 100%;
@@ -574,6 +577,7 @@ header {
     width: 77.7vw;
     height: 70vh;
     max-height: 800px;
+    min-height: 700px;
     margin: 20px auto;
     display: flex;
     flex-direction: column;
@@ -837,6 +841,34 @@ header {
     .interactive-card{
         height: 500px;
     }
+    #our-services{
+        flex-direction: column;
+        padding: 15px !important;
+        height: auto;
+    }
+    #our-services-box{
+        max-height: none;
+        padding: 30px 0;
+        width: 77.7vw;
+        margin: 15px auto !important;
+    }
+    #our-services-box:hover{
+        transform: none;
+    }
+    #line{
+        border: none;
+        border-bottom: 1px solid var(--text-secondary);
+        height: 0;
+        min-height: none;
+        max-height: none;
+        width: 100%;
+        
+    }
+    .servicos-nobre{
+        width: 100%;
+        padding: 10px 0;
+    }
+    
 }
 
 /* Ajuste para Celular */
@@ -925,7 +957,8 @@ header {
     #our-services-box{
         max-height: none;
         padding: 30px 0;
-        margin: auto 15px !important;
+        width: 90%;
+        margin: 15px auto !important;
     }
     #line{
         border: none;
