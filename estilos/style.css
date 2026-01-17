@@ -2,9 +2,7 @@
     --bg-dark: #020c1b;
     --bg-light: #0a192f;
     --primary: #64ffda;
-    /* Um ciano para detalhes tech */
     --gold: #D4AF37;
-    /* Dourado Nobre */
     --text-main: #e6f1ff;
     --text-secondary: #8892b0;
     --font-heading: 'Montserrat', sans-serif;
@@ -29,7 +27,6 @@ body {
     overflow-x: hidden;
 }
 
-/* --- HEADER --- */
 header {
     display: flex;
     justify-content: space-between;
@@ -93,7 +90,6 @@ nav a:hover {
     background-color: rgba(212, 175, 55, 0.1);
 }
 
-/* --- HERO SECTION --- */
 .hero {
     height: 100vh;
     display: flex;
@@ -129,7 +125,6 @@ nav a:hover {
     font-size: 1.1rem;
 }
 
-/* --- PORTFOLIO SECTION --- */
 .section-title {
     display: flex;
     align-items: center;
@@ -243,7 +238,6 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     color: var(--text-secondary);
-    /* AQUI VOCÊ VAI COLOCAR A FOTO DO SITE */
     background-size: cover;
     background-position: center;
 }
@@ -293,14 +287,12 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-/* Glassmorphism para o Header */
 header {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     background-color: rgba(2, 12, 27, 0.8) !important;
 }
 
-/* Efeito Hover nos Cards de Serviço */
 .service-card {
     background: linear-gradient(135deg, #0a192f 0%, #020c1b 100%);
     padding: 30px;
@@ -315,13 +307,11 @@ header {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* --- WAVY TIMELINE CSS --- */
 .services-section {
     height: 1800px;
     padding: 100px 10%;
     position: relative;
     overflow: hidden;
-    /* Importante para animações laterais */
 }
 
 .timeline-container {
@@ -334,49 +324,36 @@ header {
     padding: 40px 0;
 }
 
-/* A Mágica da Linha SVG */
 .wavy-line {
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    /* Centraliza a linha exatamente no meio */
     width: 100px;
-    /* Largura da área da curva */
     height: 150%;
     z-index: 0;
-    /* Fica atrás dos textos */
 }
 
-/* Estilo Geral dos Itens */
 .timeline-item {
     position: relative;
     width: 50%;
-    /* Ocupa metade da tela */
     padding: 30px;
     z-index: 1;
     margin-bottom: 40px;
-    /* Espaço entre os serviços */
 }
 
-/* Posicionamento Direita/Esquerda */
 .item-right {
     align-self: flex-end;
-    /* Joga para a direita */
     text-align: left;
     padding-left: 60px;
-    /* Afasta da linha central */
 }
 
 .item-left {
     align-self: flex-start;
-    /* Joga para a esquerda */
     text-align: right;
     padding-right: 60px;
-    /* Afasta da linha central */
 }
 
-/* Estilo dos Títulos e Descrições */
 .content-box h3 {
     font-family: var(--font-heading);
     font-size: 1.8rem;
@@ -386,7 +363,6 @@ header {
     position: relative;
 }
 
-/* O sublinhado dourado do seu desenho */
 .content-box h3::after {
     content: '';
     position: absolute;
@@ -400,12 +376,10 @@ header {
     right: 0;
 }
 
-/* Sublinhado alinha à direita */
 .item-right .content-box h3::after {
     left: 0;
 }
 
-/* Sublinhado alinha à esquerda */
 
 .content-box p {
     color: var(--text-secondary);
@@ -413,31 +387,24 @@ header {
     margin-top: 15px;
 }
 
-/* --- ANIMAÇÕES ESPECÍFICAS DA TIMELINE --- */
-
-/* Base da animação (sobrescreve um pouco a padrão para este caso) */
 .timeline-item.reveal {
     opacity: 0;
     transition: all 1s ease-out;
 }
 
-/* Itens da esquerda vêm da esquerda */
 .item-left.reveal {
     transform: translateX(-100px);
 }
 
-/* Itens da direita vêm da direita */
 .item-right.reveal {
     transform: translateX(100px);
 }
 
-/* Quando ficam ativos, voltam ao centro */
 .timeline-item.reveal.active {
     opacity: 1;
     transform: translateX(0);
 }
 
-/* --- ESTILO SEÇÃO PROCESSO --- */
 .process-section {
     padding: 100px 10%;
     background-color: var(--bg-dark);
@@ -472,7 +439,6 @@ header {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* O número gigante ao fundo */
 .step-number {
     position: absolute;
     top: -10px;
@@ -480,7 +446,6 @@ header {
     font-size: 8rem;
     font-weight: 800;
     color: rgba(212, 175, 55, 0.05);
-    /* Dourado bem transparente */
     font-family: var(--font-heading);
     line-height: 1;
     z-index: 0;
@@ -532,10 +497,8 @@ header {
     padding: 10px 20px;
 }
 
-/* --- ESTILO SEÇÃO COMO NÓS FAZEMOS ISSO --- */
 .how-we-do-it-section {
     padding: 80px 3%;
-    /* Fundo ligeiramente mais claro para destacar o card */
     background-color: #051326;
     width: 100vw;
     height: auto;
@@ -543,9 +506,7 @@ header {
     justify-content: center;
 }
 
-/* O Card Interativo */
 .interactive-card {
-    /* Cor de fundo original do seu print */
     background-color: #020c1b;
     padding: 50px;
     border-radius: 20px;
@@ -555,8 +516,6 @@ header {
     width: 80vw;
     max-width: 100%;
     border: 2px solid transparent;
-    /* Borda transparente inicial */
-    /* Sombra sutil para profundidade */
     box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
     transition: all 0.4s ease;
     position: relative;
@@ -688,10 +647,8 @@ header {
     flex-direction: column;
     align-items: center;
     min-height: 120vh;
-    /* Dá espaço para o scroll acontecer */
 }
 
-/* Estilo dos Textos */
 .scroll-title {
     font-family: var(--font-heading);
     color: var(--text-main);
@@ -716,13 +673,11 @@ header {
     margin-bottom: 15px;
 }
 
-/* Classes de Ativação (serão postas pelo JS) */
 .active-text {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* O SVG da Linha */
 .svg-wrapper {
     width: 200px;
     height: 600px;
@@ -730,23 +685,17 @@ header {
 }
 
 #drawing-path {
-    /* Esconde a linha inicialmente */
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
 }
 
-/* Efeito de Hover no Card */
 .interactive-card:hover {
-    /* Elevação suave */
     transform: translateY(-10px);
-    /* Borda dourada brilhante */
     border-color: var(--gold);
-    /* Sombra mais intensa e com um brilho dourado */
     box-shadow: 0 0 30px 10px rgba(212, 174, 55, 0.2),
         0 0 30px rgba(212, 175, 55, 0.2) inset;
 }
 
-/* Ícone e seu Container */
 .icon-container {
     margin-bottom: 25px;
     display: inline-block;
@@ -759,23 +708,17 @@ header {
     filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3));
 }
 
-/* Animação do Ícone no Hover */
 .interactive-card:hover .consultancy-icon {
-    /* Gira levemente e aumenta */
     transform: rotate(10deg) scale(1.1);
-    /* Brilho mais intenso */
     filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.6));
 }
 
-/* Tipografia */
 .how-we-do-it-section .section-title {
     font-size: 2rem;
     margin-bottom: 15px;
-    /* Garante que o título principal use a fonte correta e cor */
     font-family: var(--font-heading);
     color: var(--text-main);
     text-transform: lowercase;
-    /* Mantendo seu estilo original */
 }
 
 .how-we-do-it-section .subtitle {
@@ -871,7 +814,6 @@ header {
     
 }
 
-/* Ajuste para Celular */
 @media (max-width: 768px) {
     .wavy-line {
         display: none;
@@ -921,7 +863,6 @@ header {
         justify-self: center;
     }
 
-    /* Remove a linha em telas pequenas para não bagunçar */
     .timeline-item {
         width: 100%;
         text-align: center;
@@ -940,7 +881,6 @@ header {
         width: 60px;
     }
 
-    /* Sublinhado centralizado */
     .item-left.reveal,
     .item-right.reveal {
         transform: translateY(50px);
@@ -1005,7 +945,6 @@ header {
     }
 }
 
-/* --- FOOTER --- */
 footer {
     text-align: center;
     padding: 20px;
@@ -1014,7 +953,6 @@ footer {
     background-color: #020c1b;
 }
 
-/* --- MOBILE --- */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5rem;
@@ -1024,7 +962,6 @@ footer {
         display: none;
     }
 
-    /* Simples hide para mobile nesta versão */
     .section-title::after {
         width: 100px;
     }
