@@ -458,11 +458,10 @@
             const data = JSON.stringify({
                 project: "nobre",
                 device: navigator.userAgent,
-                time: new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }),
-                gateKey: 'whyAreYouLookingHere?'
+                time: new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })
             })
 
-            const request = await fetch('https://vst-tracker.vercel.app/info', {
+            const request = await fetch('http://localhost:3000/info', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -472,8 +471,8 @@
 
             const response = await request.json()
 
-            // console.log('Função acionada')
-            // console.log(response)
+            console.log('Função acionada')
+            console.log(response)
         }
 
         window.addEventListener('load', tckNobre())
